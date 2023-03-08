@@ -1,0 +1,4 @@
+while (True):
+    freedrive_mode()
+    sleep(10.0)
+  end

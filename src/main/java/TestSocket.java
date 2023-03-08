@@ -21,11 +21,11 @@ public class TestSocket {
         in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
     }
 
-    public String sendMessage(String msg) throws IOException {
+    public void sendMessage(String msg) throws IOException {
         out.println(msg);
 //        String resp = in.lines().collect(Collectors.joining());
-        String resp = org.apache.commons.io.IOUtils.toString(in);
-        return resp;
+//        String resp = org.apache.commons.io.IOUtils.toString(in);
+//        return resp;
     }
 
     public void stopConnection() throws IOException {
@@ -40,9 +40,9 @@ public class TestSocket {
         sock.startConnection();
 
         String motion = "movej([-1.7071962225543427, -1.5707724730121058, -1.5707533995257776, -1.5707963267948966, -4.726985756550924, -0.0370410124408167], a=1.3962634015954636, v=1.0471975511965976)";
-        String resp = sock.sendMessage(motion);
+//        String resp = sock.sendMessage(motion);
 
-        System.out.println(resp);
+//        System.out.println(resp);
 
 
     }
